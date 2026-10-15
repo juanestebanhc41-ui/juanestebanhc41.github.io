@@ -20,23 +20,25 @@
     <title>REFSAN</title>
 </head>
 
-<body style="background-color: #0d0d0d; margin: 0;">
-    <header class="cabecera" style="display: flex; flex-direction: column; align-items: center; background-color: #0d0d0d; padding: 20px;">
-        <div style="text-align: center;">
-            <h1 class="titulo" style="color: #ffffff;"> 
-                <span class="titulo-span" style="color: #ff0000;">Carniceria Chapala</span>XD
+<body style="background-color: #0d0d0d; margin: 0; font-family: sans-serif;">
+    <header class="cabecera" style="display: flex; flex-direction: column; align-items: center; background-color: #0d0d0d; padding: 20px; text-align: center;">
+        <div style="margin-bottom: 20px;">
+            <h1 class="titulo" style="color: #ffffff; font-size: 1.8rem; margin: 0 0 10px 0;"> 
+                <span class="titulo-span" style="color: #ff0000;">Carniceria Chapala</span><span style="color: #ffffff;">XD</span>
             </h1>
-            <h1 class="titulo2"><span class="titulo-span">SBR</span>trompi</h1>
+            <h1 class="titulo2" style="color: #ffffff; font-size: 1.4rem; margin: 0;">
+                <span class="titulo-span" style="color: #ff0000;">SBR</span>trompi
+            </h1>
         </div>
-        <div>
-            <img src="img/ryuji.jpg" alt="Ryuji">
-        </div>
-        <div>
-            <img src="img/makoto.jpg" alt="Makoto">
+
+        <!-- Contenedor de imágenes con tamaño reducido y ordenado -->
+        <div style="display: flex; flex-direction: column; gap: 15px; align-items: center; width: 100%;">
+            <img src="img/ryuji.jpg" alt="Ryuji" style="width: 150px; height: auto; border-radius: 8px; object-fit: cover;">
+            <img src="img/makoto.jpg" alt="Makoto" style="width: 150px; height: auto; border-radius: 8px; object-fit: cover;">
         </div>
     </header>
 
-    <!-- Script para registrar el Service Worker (Necesario para la PWA) -->
+    <!-- Script para registrar el Service Worker (PWA) -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
