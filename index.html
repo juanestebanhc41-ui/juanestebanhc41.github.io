@@ -6,12 +6,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0D0D0D">
+    
     <link rel="shortcut icon" href="img/refsan5.png" type="image/x-icon">
     <link rel="stylesheet" href="css/inicio.css">
     <link rel="stylesheet" href="css/fancybox.css" />
-    <script src="js/jquery.js"></script>
-    <script src="js/fancybox.js"></script>
+    
+    <!-- jQuery cargado una sola vez y antes de sus plugins -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/fancybox.js"></script>
+    
     <link rel="manifest" href="manifest.json">
     <title>REFSAN</title>
 </head>
@@ -28,9 +32,20 @@
             <img src="img/ryuji.jpg" alt="Ryuji">
         </div>
         <div>
-            <img src="img/makoto.jpg" alt="Ryuji">
+            <img src="img/makoto.jpg" alt="Makoto">
         </div>
     </header>
+
+    <!-- Script para registrar el Service Worker (Necesario para la PWA) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker registrado con éxito', reg))
+                    .catch(err => console.log('Error al registrar el Service Worker', err));
+            });
+        }
+    </script>
 </body>
 
 </html>
