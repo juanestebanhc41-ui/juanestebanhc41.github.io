@@ -8,7 +8,7 @@
             "type":"image/png"
         }
     ],
-    "start_url":"/ryuji/index_xampp.php",
+    "start_url":"/ryuji/index.html",
     "display": "standalone", 
     "background_color": "#0D0D0D",
     "theme_color": "#0D0D0D",
